@@ -78,10 +78,6 @@ We start from the base dataset and create a consistent working universe (“data
 * remove obvious duplicates / invalid entries
 * apply baseline filters required for downstream analysis
 
-**Output (example):**
-
-* `data/intermediate/base_narrowed.csv`
-
 ---
 
 ### 2) Enrichment — Two API Passes
@@ -90,11 +86,6 @@ The narrowed dataset is enriched with external market/visibility signals via API
 
 **Pass 1:** core external metadata (ratings, tags, platforms, etc.)
 **Pass 2:** additional signals / backfill (e.g., social presence proxies such as Twitch/YouTube/Reddit)
-
-**Outputs (examples):**
-
-* `data/intermediate/enriched_pass_1.csv`
-* `data/intermediate/enriched_pass_2.csv`
 
 ---
 
@@ -106,10 +97,6 @@ After enrichment, the dataset is standardized for analysis:
 * categorical standardization (genres/tags/platform flags)
 * derived features (price bands, success tiers, engagement proxies)
 * quality checks and basic validation
-
-**Output (example):**
-
-* `data/enriched/final_analytics_base.csv`
 
 > The Python pipeline outputs can be found here:
 > [https://drive.google.com/drive/folders/1AQsFa6xYqa_hziho9OHlEzAZSD-a_dqa?usp=sharing](https://drive.google.com/drive/folders/1AQsFa6xYqa_hziho9OHlEzAZSD-a_dqa?usp=sharing)
@@ -134,10 +121,6 @@ A curated set of SQL queries generates the final result datasets used in:
 
 * insight reporting
 * the executive dashboard
-
-**Outputs live in:**
-
-* `sql/outputs/`
 
 Examples of result topics:
 
